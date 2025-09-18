@@ -1,0 +1,74 @@
+:root{
+    --bg-color: #121212; /*Dark background*/
+    --text-color: #f0f0f0; /*ligt text*/
+    --accent-color: #00bcd4; /*A vibrant teel*/
+    --secondary-accent: #ff4081; /*A vibrant pink*/
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section{
+    height: 100vh; /*Make it take up the full screen height*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-color)0%, #1c1c1c 100%);
+}
+
+.cta-button{
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover{
+    transform: scale(1.1);
+}
+
+.themeToggle{
+    position: fixed;
+    right: 20px;
+    margin-top: 10px;
+}
+
+.toggleBtn{
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode{
+    --bg-color: #f0f0f0; 
+    --text-color: #121212; 
+    --accent-color: #ff4081; 
+    --secondary-accent: #00bcd4;
+}
+
+/* Inuutially hide the elements */
+.hidden{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Make them visible and animate in */
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
